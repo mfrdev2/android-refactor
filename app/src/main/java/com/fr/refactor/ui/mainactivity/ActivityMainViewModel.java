@@ -8,20 +8,17 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MediatorLiveData;
 
 import com.fr.refactor.R;
-import com.fr.refactor.MyApp;
+
 import com.fr.refactor.base.BaseViewModel;
 import com.fr.refactor.data.remote.repositories.AddressRepo;
 import com.fr.refactor.model.api.Address;
 import com.fr.refactor.utils.network.Resource;
-
 import java.util.List;
-
-import javax.inject.Inject;
 
 public class ActivityMainViewModel extends BaseViewModel<Navigator> {
 
     final MediatorLiveData<Resource<List<Address>>> addressListData = new MediatorLiveData<>();
-    @Inject
+
     public AddressRepo addressRepo;
 
     private Application application;
@@ -37,7 +34,7 @@ public class ActivityMainViewModel extends BaseViewModel<Navigator> {
         this.application = application;
 
         setText(getVersionName());
-        (((MyApp)application)).appComponent.inject(this);
+
 
         System.out.println(addressRepo);
         sendAddressListRequest("Dhaka",null);

@@ -1,3 +1,4 @@
+/*
 package com.fr.refactor.base;
 
 import android.app.Dialog;
@@ -103,3 +104,4 @@ public abstract class BaseDialog extends DialogFragment {
         }
     }
 }
+*/
